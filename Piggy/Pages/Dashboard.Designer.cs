@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             SideBarMenu = new Panel();
+            pictureBox6 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            button4 = new Button();
+            label2 = new Label();
+            label1 = new Label();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -41,6 +48,10 @@
             label4 = new Label();
             pictureBox1 = new PictureBox();
             SideBarMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)roundImage1).BeginInit();
             TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -50,6 +61,13 @@
             // SideBarMenu
             // 
             SideBarMenu.BackColor = Color.FromArgb(52, 60, 71);
+            SideBarMenu.Controls.Add(pictureBox6);
+            SideBarMenu.Controls.Add(pictureBox5);
+            SideBarMenu.Controls.Add(pictureBox4);
+            SideBarMenu.Controls.Add(pictureBox3);
+            SideBarMenu.Controls.Add(button4);
+            SideBarMenu.Controls.Add(label2);
+            SideBarMenu.Controls.Add(label1);
             SideBarMenu.Controls.Add(button3);
             SideBarMenu.Controls.Add(button2);
             SideBarMenu.Controls.Add(button1);
@@ -57,10 +75,90 @@
             SideBarMenu.Controls.Add(label5);
             SideBarMenu.Controls.Add(roundImage1);
             SideBarMenu.ForeColor = SystemColors.ButtonHighlight;
-            SideBarMenu.Location = new Point(17, 22);
+            SideBarMenu.Location = new Point(10, 36);
             SideBarMenu.Name = "SideBarMenu";
             SideBarMenu.Size = new Size(193, 816);
             SideBarMenu.TabIndex = 0;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.FromArgb(29, 34, 40);
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(30, 456);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(35, 31);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 15;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.Firebrick;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(30, 690);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(35, 31);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 14;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.FromArgb(29, 34, 40);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(30, 354);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(35, 31);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 13;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.FromArgb(29, 34, 40);
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(30, 404);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(35, 31);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 12;
+            pictureBox3.TabStop = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Firebrick;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseOverBackColor = Color.IndianRed;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(21, 686);
+            button4.Margin = new Padding(10, 3, 3, 3);
+            button4.Name = "button4";
+            button4.Padding = new Padding(30, 0, 0, 0);
+            button4.Size = new Size(150, 40);
+            button4.TabIndex = 11;
+            button4.Text = "Settings";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(52, 286);
+            label2.Name = "label2";
+            label2.Size = new Size(93, 20);
+            label2.TabIndex = 10;
+            label2.Text = "Montly Sales";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Historic", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(39, 244);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 37);
+            label1.TabIndex = 9;
+            label1.Text = "$69,420";
             // 
             // button3
             // 
@@ -69,7 +167,7 @@
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(23, 509);
+            button3.Location = new Point(21, 451);
             button3.Margin = new Padding(10, 3, 3, 3);
             button3.Name = "button3";
             button3.Size = new Size(150, 40);
@@ -85,7 +183,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(23, 407);
+            button2.Location = new Point(21, 349);
             button2.Margin = new Padding(10, 3, 3, 3);
             button2.Name = "button2";
             button2.Padding = new Padding(45, 0, 0, 0);
@@ -101,7 +199,7 @@
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(23, 457);
+            button1.Location = new Point(21, 399);
             button1.Margin = new Padding(10, 3, 3, 3);
             button1.Name = "button1";
             button1.Padding = new Padding(45, 0, 0, 0);
@@ -176,11 +274,12 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("AMS Aakash", 70F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(596, -79);
+            label4.Location = new Point(595, -78);
             label4.Name = "label4";
             label4.Size = new Size(268, 273);
             label4.TabIndex = 13;
             label4.Text = "var[h";
+            label4.Click += label4_Click;
             // 
             // pictureBox1
             // 
@@ -199,7 +298,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1358, 837);
+            ClientSize = new Size(1358, 774);
             Controls.Add(SideBarMenu);
             Controls.Add(TitleBar);
             FormBorderStyle = FormBorderStyle.None;
@@ -209,6 +308,10 @@
             Load += Dashboard_Load;
             SideBarMenu.ResumeLayout(false);
             SideBarMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)roundImage1).EndInit();
             TitleBar.ResumeLayout(false);
             TitleBar.PerformLayout();
@@ -230,5 +333,12 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Label label2;
+        private Label label1;
+        private Button button4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
     }
 }
