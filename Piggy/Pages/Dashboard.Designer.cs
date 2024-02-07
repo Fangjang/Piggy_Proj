@@ -285,6 +285,7 @@
             Controls.Add(SideBarMenu);
             Controls.Add(TitleBar);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";

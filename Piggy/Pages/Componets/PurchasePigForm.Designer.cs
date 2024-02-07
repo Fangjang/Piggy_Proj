@@ -164,7 +164,10 @@
             Controls.Add(label5);
             Controls.Add(label1);
             Controls.Add(label3);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "PurchasePigForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Purchase a pig";
             ((System.ComponentModel.ISupportInitialize)priceElm).EndInit();
             ((System.ComponentModel.ISupportInitialize)ageElm).EndInit();

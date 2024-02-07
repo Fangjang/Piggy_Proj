@@ -30,7 +30,7 @@ namespace Piggy.Pages.Componets
             var sellingAmount = sellingAmountElm.Text.Trim();
 
 
-        if(string.IsNullOrEmpty(pigID) || string.IsNullOrEmpty(sellingAmount))
+            if (string.IsNullOrEmpty(pigID) || string.IsNullOrEmpty(sellingAmount))
             {
                 MessageBox.Show("Please fill all fields!");
                 return;
@@ -53,9 +53,9 @@ namespace Piggy.Pages.Componets
                         "Are you sure you want to sell pig ? \n " +
                         "Pig weight : "
                         + datPig.pigweight.ToString() + "\n" +
-                        "Pig Sex : " + (datPig.pigsex == "M" ? "Male" : "Female") + "\n"+
-                        "Age : "+datPig.pigage.ToString() + "\n"+
-                        "Selling Amount : " + sellingAmount + "\n" 
+                        "Pig Sex : " + (datPig.pigsex == "M" ? "Male" : "Female") + "\n" +
+                        "Age : " + datPig.pigage.ToString() + "\n" +
+                        "Selling Amount : " + sellingAmount + "\n"
                         ,
                         "Sell Pig", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -68,7 +68,7 @@ namespace Piggy.Pages.Componets
                           Update pigs set soldDate = now()  where pigid = @pigID;
                           Update pigs set soldPrice = @sellingAmount where pigid = @pigID;
                         ";
-                       var p = conn.Query(sellPigQuery, new { pigID, soldDate,sellingAmount });
+                        var p = conn.Query(sellPigQuery, new { pigID, soldDate, sellingAmount });
                         MessageBox.Show("Pig sold successfully!");
                         ///////////////
                         _pigsInstance.LoadPigs();

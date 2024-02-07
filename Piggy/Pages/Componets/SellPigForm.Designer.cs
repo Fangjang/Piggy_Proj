@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellPigForm));
             PurchasePigElm = new Button();
             pigIdNice = new TextBox();
             label3 = new Label();
@@ -108,7 +109,10 @@
             Controls.Add(pigIdNice);
             Controls.Add(label3);
             Controls.Add(PurchasePigElm);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SellPigForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Sell pig";
             ResumeLayout(false);
             PerformLayout();

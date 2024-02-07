@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard_Dashboard));
             label1 = new Label();
             salesToday = new Label();
             soldTodayElm = new Label();
@@ -117,6 +118,7 @@
             Controls.Add(salesToday);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Dashboard_Dashboard";
             Text = "Dashboard_Dashboard";
             ((System.ComponentModel.ISupportInitialize)dgvhome).EndInit();

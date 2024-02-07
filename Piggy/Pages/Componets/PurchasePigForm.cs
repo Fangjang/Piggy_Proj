@@ -52,7 +52,7 @@ namespace Piggy.Pages.Componets
                             (@age, @weight, @sex, @price);  
                     ";
 
-                var dataCount = conn.Execute(dataCountQuery, new { age, weight,sex, price });
+                var dataCount = conn.Execute(dataCountQuery, new { age, weight, sex, price });
                 if (dataCount > 0)
                 {
                     MessageBox.Show("Pig has been Added!");

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard_Pigs));
             totalPigsCountTop = new Label();
             MalePigCount = new Label();
             FemalePigCount = new Label();
@@ -130,6 +131,7 @@
             Controls.Add(MalePigCount);
             Controls.Add(totalPigsCountTop);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Dashboard_Pigs";
             Text = "Dashboard_Pigs";
             Load += Dashboard_Pigs_Load;

@@ -190,6 +190,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(label4);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

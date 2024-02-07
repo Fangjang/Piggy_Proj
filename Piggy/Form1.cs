@@ -71,14 +71,14 @@ namespace Piggy
 
                 var dataCount = conn.Query<int>(dataCountQuery, new { password }).FirstOrDefault();
 
-                  
+
                 if (dataCount > 0)
                 {
-                     var getUserDetails = @"
+                    var getUserDetails = @"
                         SELECT * FROM users WHERE userPassword = @password
                     ";
-                var userDetails = conn.Query<UserModel>(getUserDetails, new { password }).FirstOrDefault();
-                Session.CurrentUser = userDetails;
+                    var userDetails = conn.Query<UserModel>(getUserDetails, new { password }).FirstOrDefault();
+                    Session.CurrentUser = userDetails;
                     this.Hide();
                     var dashboard = new Dashboard();
                     dashboard.Show();
