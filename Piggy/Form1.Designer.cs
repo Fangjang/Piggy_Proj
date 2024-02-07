@@ -36,9 +36,9 @@
             panel1 = new Panel();
             label3 = new Label();
             PasswordInput = new Label();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            loginBtn = new Button();
+            userName = new TextBox();
+            passwordEm = new TextBox();
             label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -54,7 +54,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
             // 
             // label1
             // 
@@ -120,47 +119,47 @@
             PasswordInput.TabIndex = 8;
             PasswordInput.Text = "Password";
             // 
-            // button1
+            // loginBtn
             // 
-            button1.BackColor = Color.Black;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.WhiteSmoke;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.DarkGray;
-            button1.FlatAppearance.MouseOverBackColor = Color.DimGray;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.GhostWhite;
-            button1.Location = new Point(32, 271);
-            button1.Name = "button1";
-            button1.Size = new Size(256, 40);
-            button1.TabIndex = 9;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            loginBtn.BackColor = Color.Black;
+            loginBtn.Cursor = Cursors.Hand;
+            loginBtn.FlatAppearance.BorderColor = Color.WhiteSmoke;
+            loginBtn.FlatAppearance.BorderSize = 0;
+            loginBtn.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+            loginBtn.FlatAppearance.MouseOverBackColor = Color.DimGray;
+            loginBtn.FlatStyle = FlatStyle.Flat;
+            loginBtn.ForeColor = Color.GhostWhite;
+            loginBtn.Location = new Point(32, 271);
+            loginBtn.Name = "loginBtn";
+            loginBtn.Size = new Size(256, 40);
+            loginBtn.TabIndex = 9;
+            loginBtn.Text = "Login";
+            loginBtn.UseVisualStyleBackColor = false;
+            loginBtn.Click += loginBtn_Click_1;
             // 
-            // textBox2
+            // userName
             // 
-            textBox2.AccessibleName = "";
-            textBox2.BackColor = Color.Silver;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(32, 161);
-            textBox2.Margin = new Padding(10, 3, 3, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(256, 27);
-            textBox2.TabIndex = 10;
+            userName.AccessibleName = "";
+            userName.BackColor = Color.Silver;
+            userName.BorderStyle = BorderStyle.None;
+            userName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            userName.Location = new Point(32, 161);
+            userName.Margin = new Padding(10, 3, 3, 3);
+            userName.Name = "userName";
+            userName.Size = new Size(256, 27);
+            userName.TabIndex = 10;
             // 
-            // textBox1
+            // passwordEm
             // 
-            textBox1.AccessibleName = "";
-            textBox1.BackColor = Color.Silver;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(32, 221);
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(256, 27);
-            textBox1.TabIndex = 11;
+            passwordEm.AccessibleName = "";
+            passwordEm.BackColor = Color.Silver;
+            passwordEm.BorderStyle = BorderStyle.None;
+            passwordEm.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordEm.Location = new Point(32, 221);
+            passwordEm.Name = "passwordEm";
+            passwordEm.PasswordChar = '*';
+            passwordEm.Size = new Size(256, 27);
+            passwordEm.TabIndex = 11;
             // 
             // label4
             // 
@@ -173,7 +172,6 @@
             label4.Size = new Size(284, 290);
             label4.TabIndex = 12;
             label4.Text = "var[h";
-            label4.Click += label4_Click;
             // 
             // Form1
             // 
@@ -182,9 +180,9 @@
             BackColor = Color.FloralWhite;
             ClientSize = new Size(773, 450);
             Controls.Add(panel1);
-            Controls.Add(textBox1);
-            Controls.Add(textBox2);
-            Controls.Add(button1);
+            Controls.Add(passwordEm);
+            Controls.Add(userName);
+            Controls.Add(loginBtn);
             Controls.Add(PasswordInput);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -212,9 +210,9 @@
         private Panel panel1;
         private Label label3;
         private Label PasswordInput;
-        private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button loginBtn;
+        private TextBox userName;
+        private TextBox passwordEm;
         private Label label4;
     }
 }

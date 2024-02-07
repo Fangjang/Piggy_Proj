@@ -12,7 +12,7 @@ namespace Piggy.provider
     {
         public static IDbConnection GetConnection()
         {
-            return new MySqlConnection("Server=localhost;database=bca_iii_test;Uid=root;Pwd=admin");
+            return new MySqlConnection("Server=localhost;database=piggydb;Uid=root;Pwd=cat123;Allow User Variables=True");
         }
     }
 }

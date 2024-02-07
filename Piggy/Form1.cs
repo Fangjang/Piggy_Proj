@@ -1,5 +1,7 @@
+using Piggy.models;
 using Piggy.Pages;
-
+using Piggy.provider;
+using Dapper;
 namespace Piggy
 {
     public partial class Form1 : Form
@@ -15,15 +17,6 @@ namespace Piggy
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void mouse_Down(object sender, MouseEventArgs e)
         {
@@ -43,26 +36,59 @@ namespace Piggy
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.ExitThread();
+            DialogResult result = MessageBox.Show("Are you sure you want to quit ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.ExitThread();
+
+            }
+            else
+            {
+                return;
+            }
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+
+
+        // Handling Login Logic
+        private void loginBtn_Click_1(object sender, EventArgs e)
         {
 
-        }
+            var username = userName.Text;
+            var password = passwordEm.Text;
+            // if(username == "" || password == "")
+            // {
+            //     MessageBox.Show("Please fill in all fields");
+            //     return;
+            //     }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            this.Hide();
-            Dashboard ds = new Dashboard();
-            ds.Show();
-        }
+            using (var conn = ConnectionProvider.GetConnection())
+            {
+                var dataCountQuery = @"
+                        SELECT count(*) FROM users WHERE userPassword = @password 
+                    ";
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+                var dataCount = conn.Query<int>(dataCountQuery, new { password }).FirstOrDefault();
+
+                  
+                if (dataCount > 0)
+                {
+                     var getUserDetails = @"
+                        SELECT * FROM users WHERE userPassword = @password
+                    ";
+                var userDetails = conn.Query<UserModel>(getUserDetails, new { password }).FirstOrDefault();
+                Session.CurrentUser = userDetails;
+                    this.Hide();
+                    var dashboard = new Dashboard();
+                    dashboard.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password");
+                }
+            }
+
 
         }
     }

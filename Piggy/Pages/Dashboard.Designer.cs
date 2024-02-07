@@ -33,25 +33,23 @@
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            button4 = new Button();
+            Button_Logout = new Button();
             label2 = new Label();
-            label1 = new Label();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            label6 = new Label();
+            salesMonth = new Label();
+            Button_Pigs = new Button();
+            button_Dashboard = new Button();
+            adminName = new Label();
             label5 = new Label();
             roundImage1 = new RoundImage();
             TitleBar = new Panel();
             pictureBox2 = new PictureBox();
             label4 = new Label();
             pictureBox1 = new PictureBox();
+            Panel_Main = new Panel();
             SideBarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)roundImage1).BeginInit();
             TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -64,14 +62,12 @@
             SideBarMenu.Controls.Add(pictureBox6);
             SideBarMenu.Controls.Add(pictureBox5);
             SideBarMenu.Controls.Add(pictureBox4);
-            SideBarMenu.Controls.Add(pictureBox3);
-            SideBarMenu.Controls.Add(button4);
+            SideBarMenu.Controls.Add(Button_Logout);
             SideBarMenu.Controls.Add(label2);
-            SideBarMenu.Controls.Add(label1);
-            SideBarMenu.Controls.Add(button3);
-            SideBarMenu.Controls.Add(button2);
-            SideBarMenu.Controls.Add(button1);
-            SideBarMenu.Controls.Add(label6);
+            SideBarMenu.Controls.Add(salesMonth);
+            SideBarMenu.Controls.Add(Button_Pigs);
+            SideBarMenu.Controls.Add(button_Dashboard);
+            SideBarMenu.Controls.Add(adminName);
             SideBarMenu.Controls.Add(label5);
             SideBarMenu.Controls.Add(roundImage1);
             SideBarMenu.ForeColor = SystemColors.ButtonHighlight;
@@ -84,7 +80,7 @@
             // 
             pictureBox6.BackColor = Color.FromArgb(29, 34, 40);
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(30, 456);
+            pictureBox6.Location = new Point(30, 415);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(35, 31);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -112,113 +108,90 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 13;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
-            // pictureBox3
+            // Button_Logout
             // 
-            pictureBox3.BackColor = Color.FromArgb(29, 34, 40);
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(30, 404);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(35, 31);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 12;
-            pictureBox3.TabStop = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.Firebrick;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseOverBackColor = Color.IndianRed;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(21, 686);
-            button4.Margin = new Padding(10, 3, 3, 3);
-            button4.Name = "button4";
-            button4.Padding = new Padding(30, 0, 0, 0);
-            button4.Size = new Size(150, 40);
-            button4.TabIndex = 11;
-            button4.Text = "Settings";
-            button4.UseVisualStyleBackColor = false;
+            Button_Logout.BackColor = Color.Firebrick;
+            Button_Logout.FlatAppearance.BorderSize = 0;
+            Button_Logout.FlatAppearance.MouseOverBackColor = Color.IndianRed;
+            Button_Logout.FlatStyle = FlatStyle.Flat;
+            Button_Logout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Button_Logout.Location = new Point(21, 686);
+            Button_Logout.Margin = new Padding(10, 3, 3, 3);
+            Button_Logout.Name = "Button_Logout";
+            Button_Logout.Padding = new Padding(30, 0, 0, 0);
+            Button_Logout.Size = new Size(150, 40);
+            Button_Logout.TabIndex = 11;
+            Button_Logout.Text = "Logout";
+            Button_Logout.UseVisualStyleBackColor = false;
+            Button_Logout.Click += Button_Logout_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(52, 286);
+            label2.Location = new Point(41, 287);
             label2.Name = "label2";
-            label2.Size = new Size(93, 20);
+            label2.Size = new Size(102, 20);
             label2.TabIndex = 10;
-            label2.Text = "Montly Sales";
+            label2.Text = "All Time Sales";
             // 
-            // label1
+            // salesMonth
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Historic", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(39, 244);
-            label1.Name = "label1";
-            label1.Size = new Size(120, 37);
-            label1.TabIndex = 9;
-            label1.Text = "$69,420";
+            salesMonth.AutoSize = true;
+            salesMonth.Font = new Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            salesMonth.Location = new Point(41, 252);
+            salesMonth.Name = "salesMonth";
+            salesMonth.Size = new Size(104, 32);
+            salesMonth.TabIndex = 9;
+            salesMonth.Text = "$69,420";
+            salesMonth.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // Button_Pigs
             // 
-            button3.BackColor = Color.FromArgb(29, 34, 40);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(21, 451);
-            button3.Margin = new Padding(10, 3, 3, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(150, 40);
-            button3.TabIndex = 8;
-            button3.Text = "Pigs";
-            button3.UseVisualStyleBackColor = false;
+            Button_Pigs.BackColor = Color.FromArgb(29, 34, 40);
+            Button_Pigs.FlatAppearance.BorderSize = 0;
+            Button_Pigs.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
+            Button_Pigs.FlatStyle = FlatStyle.Flat;
+            Button_Pigs.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Button_Pigs.Location = new Point(21, 410);
+            Button_Pigs.Margin = new Padding(10, 3, 3, 3);
+            Button_Pigs.Name = "Button_Pigs";
+            Button_Pigs.Size = new Size(150, 40);
+            Button_Pigs.TabIndex = 8;
+            Button_Pigs.Text = "Pigs";
+            Button_Pigs.UseVisualStyleBackColor = false;
+            Button_Pigs.Click += Button_Pigs_Click;
             // 
-            // button2
+            // button_Dashboard
             // 
-            button2.BackColor = Color.FromArgb(29, 34, 40);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(21, 349);
-            button2.Margin = new Padding(10, 3, 3, 3);
-            button2.Name = "button2";
-            button2.Padding = new Padding(45, 0, 0, 0);
-            button2.Size = new Size(150, 40);
-            button2.TabIndex = 7;
-            button2.Text = "Dashboard";
-            button2.UseVisualStyleBackColor = false;
+            button_Dashboard.BackColor = Color.FromArgb(29, 34, 40);
+            button_Dashboard.FlatAppearance.BorderSize = 0;
+            button_Dashboard.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
+            button_Dashboard.FlatStyle = FlatStyle.Flat;
+            button_Dashboard.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button_Dashboard.ForeColor = SystemColors.ButtonHighlight;
+            button_Dashboard.Location = new Point(21, 349);
+            button_Dashboard.Margin = new Padding(10, 3, 3, 3);
+            button_Dashboard.Name = "button_Dashboard";
+            button_Dashboard.Padding = new Padding(45, 0, 0, 0);
+            button_Dashboard.Size = new Size(150, 40);
+            button_Dashboard.TabIndex = 7;
+            button_Dashboard.Text = "Dashboard";
+            button_Dashboard.UseVisualStyleBackColor = false;
+            button_Dashboard.Click += button_Dashboard_Click;
             // 
-            // button1
+            // adminName
             // 
-            button1.BackColor = Color.FromArgb(29, 34, 40);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(21, 399);
-            button1.Margin = new Padding(10, 3, 3, 3);
-            button1.Name = "button1";
-            button1.Padding = new Padding(45, 0, 0, 0);
-            button1.Size = new Size(150, 40);
-            button1.TabIndex = 6;
-            button1.Text = "Employees";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(67, 176);
-            label6.Name = "label6";
-            label6.Size = new Size(64, 23);
-            label6.TabIndex = 5;
-            label6.Text = "Admin";
+            adminName.AutoSize = true;
+            adminName.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            adminName.ForeColor = Color.White;
+            adminName.Location = new Point(67, 176);
+            adminName.Name = "adminName";
+            adminName.Size = new Size(64, 23);
+            adminName.TabIndex = 5;
+            adminName.Text = "Admin";
             // 
             // label5
             // 
@@ -253,6 +226,7 @@
             TitleBar.Name = "TitleBar";
             TitleBar.Size = new Size(1361, 130);
             TitleBar.TabIndex = 1;
+            TitleBar.Paint += TitleBar_Paint;
             TitleBar.MouseDown += mouse_down_dash;
             TitleBar.MouseMove += mouse_move_dash;
             // 
@@ -293,12 +267,21 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // Panel_Main
+            // 
+            Panel_Main.BackgroundImageLayout = ImageLayout.None;
+            Panel_Main.Location = new Point(202, 128);
+            Panel_Main.Name = "Panel_Main";
+            Panel_Main.Size = new Size(1157, 647);
+            Panel_Main.TabIndex = 2;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1358, 774);
+            Controls.Add(Panel_Main);
             Controls.Add(SideBarMenu);
             Controls.Add(TitleBar);
             FormBorderStyle = FormBorderStyle.None;
@@ -311,7 +294,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)roundImage1).EndInit();
             TitleBar.ResumeLayout(false);
             TitleBar.PerformLayout();
@@ -328,17 +310,16 @@
         private PictureBox pictureBox1;
         private Label label4;
         private PictureBox pictureBox2;
-        private Label label6;
+        private Label adminName;
         private Label label5;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button button_Dashboard;
+        private Button Button_Pigs;
         private Label label2;
-        private Label label1;
-        private Button button4;
-        private PictureBox pictureBox3;
+        private Label salesMonth;
+        private Button Button_Logout;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
+        private Panel Panel_Main;
     }
 }
