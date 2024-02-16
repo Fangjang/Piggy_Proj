@@ -64,10 +64,12 @@ namespace Piggy.Pages.Componets
                 dgvPig.Columns[1].HeaderText = "Age (Years)";
                 dgvPig.Columns[2].HeaderText = "Weight (KG)";
                 dgvPig.Columns[3].HeaderText = "Sex";
-                dgvPig.Columns[0].Width = 100;
-                dgvPig.Columns[1].Width = 200;
-                dgvPig.Columns[2].Width = 200;
-                dgvPig.Columns[3].Width = 195;
+                //Make the columns fill the grid
+                foreach (DataGridViewColumn column in dgvPig.Columns)
+                {
+                    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+
             }
         }
 
