@@ -8,7 +8,7 @@ namespace Piggy
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new SplashScreen());
+            Application.Run(new Form1());
         }
     }
 }

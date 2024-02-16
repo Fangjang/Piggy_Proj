@@ -92,8 +92,9 @@
             dgvhome.Name = "dgvhome";
             dgvhome.ReadOnly = true;
             dgvhome.RowTemplate.Height = 25;
-            dgvhome.Size = new Size(876, 406);
+            dgvhome.Size = new Size(952, 406);
             dgvhome.TabIndex = 3;
+            dgvhome.CellContentClick += dgvhome_CellContentClick;
             // 
             // label2
             // 
@@ -121,6 +122,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Dashboard_Dashboard";
             Text = "Dashboard_Dashboard";
+            Load += Dashboard_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dgvhome).EndInit();
             ResumeLayout(false);
             PerformLayout();

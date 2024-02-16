@@ -39,6 +39,8 @@
             weightElm = new NumericUpDown();
             PurchasePigElm = new Button();
             pictureBox1 = new PictureBox();
+            breedElm = new RichTextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)priceElm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ageElm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)weightElm).BeginInit();
@@ -49,7 +51,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Lucida Sans", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(345, 45);
+            label3.Location = new Point(346, 31);
             label3.Name = "label3";
             label3.Size = new Size(72, 15);
             label3.TabIndex = 11;
@@ -59,7 +61,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Lucida Sans", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(343, 104);
+            label1.Location = new Point(346, 79);
             label1.Name = "label1";
             label1.Size = new Size(75, 15);
             label1.TabIndex = 13;
@@ -69,7 +71,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Lucida Sans", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(348, 220);
+            label2.Location = new Point(346, 178);
             label2.Name = "label2";
             label2.Size = new Size(28, 15);
             label2.TabIndex = 15;
@@ -79,7 +81,7 @@
             // 
             genderElm.FormattingEnabled = true;
             genderElm.Items.AddRange(new object[] { "M", "F" });
-            genderElm.Location = new Point(346, 241);
+            genderElm.Location = new Point(348, 196);
             genderElm.Name = "genderElm";
             genderElm.Size = new Size(296, 23);
             genderElm.TabIndex = 17;
@@ -89,7 +91,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Lucida Sans", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(343, 162);
+            label5.Location = new Point(345, 128);
             label5.Name = "label5";
             label5.Size = new Size(34, 15);
             label5.TabIndex = 13;
@@ -98,7 +100,7 @@
             // priceElm
             // 
             priceElm.DecimalPlaces = 2;
-            priceElm.Location = new Point(346, 184);
+            priceElm.Location = new Point(348, 147);
             priceElm.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             priceElm.Name = "priceElm";
             priceElm.Size = new Size(296, 23);
@@ -107,7 +109,7 @@
             // ageElm
             // 
             ageElm.DecimalPlaces = 1;
-            ageElm.Location = new Point(346, 70);
+            ageElm.Location = new Point(348, 47);
             ageElm.Name = "ageElm";
             ageElm.Size = new Size(296, 23);
             ageElm.TabIndex = 18;
@@ -115,7 +117,7 @@
             // weightElm
             // 
             weightElm.DecimalPlaces = 2;
-            weightElm.Location = new Point(345, 125);
+            weightElm.Location = new Point(348, 96);
             weightElm.Maximum = new decimal(new int[] { 800, 0, 0, 0 });
             weightElm.Name = "weightElm";
             weightElm.Size = new Size(296, 23);
@@ -148,18 +150,43 @@
             pictureBox1.TabIndex = 20;
             pictureBox1.TabStop = false;
             // 
+            // breedElm
+            // 
+            breedElm.BackColor = SystemColors.ButtonHighlight;
+            breedElm.BorderStyle = BorderStyle.FixedSingle;
+            breedElm.Location = new Point(348, 246);
+            breedElm.MaxLength = 99;
+            breedElm.Multiline = false;
+            breedElm.Name = "breedElm";
+            breedElm.ScrollBars = RichTextBoxScrollBars.None;
+            breedElm.Size = new Size(294, 26);
+            breedElm.TabIndex = 21;
+            breedElm.Text = "";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Lucida Sans", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(346, 228);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 15);
+            label4.TabIndex = 15;
+            label4.Text = "Pig Breed";
+            // 
             // PurchasePigForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(683, 374);
+            Controls.Add(breedElm);
             Controls.Add(pictureBox1);
             Controls.Add(PurchasePigElm);
             Controls.Add(weightElm);
             Controls.Add(ageElm);
             Controls.Add(priceElm);
             Controls.Add(genderElm);
+            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label5);
             Controls.Add(label1);
@@ -188,5 +215,7 @@
         private NumericUpDown weightElm;
         private Button PurchasePigElm;
         private PictureBox pictureBox1;
+        private RichTextBox breedElm;
+        private Label label4;
     }
 }

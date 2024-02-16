@@ -32,7 +32,7 @@ namespace Piggy.Pages.Componets
         {
             if (
             ageElm.Text == "0.0"
-            || weightElm.Text == "0.00"
+            || weightElm.Text == "0.00" || breedElm.Text == ""
             )
             {
                 MessageBox.Show("Invalid Fields!");
@@ -43,16 +43,17 @@ namespace Piggy.Pages.Componets
             var weight = float.Parse(weightElm.Text);
             var price = float.Parse(priceElm.Text);
             var sex = genderElm.Text.Trim();
+            var breed = breedElm.Text.Trim();
             using (var conn = ConnectionProvider.GetConnection())
             {
                 var dataCountQuery = @"
                             INSERT INTO piggydb.pigs
-                            (pigage, pigweight, pigsex, pigPrice)
+                            (pigage, pigweight, pigsex, pigPrice, pigBreed)
                             VALUES 
-                            (@age, @weight, @sex, @price);  
+                            (@age, @weight, @sex, @price, @breed);  
                     ";
 
-                var dataCount = conn.Execute(dataCountQuery, new { age, weight, sex, price });
+                var dataCount = conn.Execute(dataCountQuery, new { age, weight, sex, price, breed});
                 if (dataCount > 0)
                 {
                     MessageBox.Show("Pig has been Added!");

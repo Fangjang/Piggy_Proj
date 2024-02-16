@@ -55,7 +55,8 @@ namespace Piggy.Pages.Componets
                         + datPig.pigweight.ToString() + "\n" +
                         "Pig Sex : " + (datPig.pigsex == "M" ? "Male" : "Female") + "\n" +
                         "Age : " + datPig.pigage.ToString() + "\n" +
-                        "Selling Amount : " + sellingAmount + "\n"
+                        "Selling Amount : " + sellingAmount + "\n" +
+                        "Pig Breed : " + datPig.pigBreed + "\n"
                         ,
                         "Sell Pig", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

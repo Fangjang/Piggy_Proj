@@ -35,12 +35,15 @@ namespace Piggy.Pages.Componets
                 var latestData = conn.Query<PigModel>(query);
                 dgvhome.DataSource = latestData;
                 dgvhome.Columns["IsSold"].Visible = false;
+
+
+
                 dgvhome.Columns[0].HeaderText = "ID";
                 dgvhome.Columns[1].HeaderText = "Age (Years)";
                 dgvhome.Columns[2].HeaderText = "Weight (KG)";
                 dgvhome.Columns[3].HeaderText = "Sex";
-                dgvhome.Columns[4].HeaderText = "Sold On (Date)";
                 dgvhome.Columns[5].HeaderText = "Purchased at (Price)";
+                dgvhome.Columns[6].HeaderText = "Sold Date";
 
                 // responsive 
                 foreach (DataGridViewColumn column in dgvhome.Columns)
@@ -174,6 +177,16 @@ namespace Piggy.Pages.Componets
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvhome_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

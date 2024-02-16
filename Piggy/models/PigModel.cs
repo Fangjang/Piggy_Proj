@@ -12,6 +12,7 @@ namespace Piggy.models
         public double pigage { get; set; }
         public double pigweight { get; set; }
         public string? pigsex { get; set; }
+        public string? pigBreed { get; set; }
         public bool? isSold { get; set; }
         public double? soldPrice { get; set; }
         public DateTime? soldDate { get; set; }
