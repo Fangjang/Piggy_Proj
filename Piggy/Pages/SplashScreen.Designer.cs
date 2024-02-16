@@ -53,7 +53,7 @@
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.BackgroundImageLayout = ImageLayout.None;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(66, 209);
+            pictureBox2.Location = new Point(69, 260);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(116, 114);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
