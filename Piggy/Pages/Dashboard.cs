@@ -167,6 +167,16 @@ namespace Piggy.Pages
 
         }
 
+        private void SideBarMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         /*   private void button1_Click(object sender, EventArgs e)

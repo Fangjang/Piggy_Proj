@@ -71,16 +71,17 @@
             SideBarMenu.Controls.Add(label5);
             SideBarMenu.Controls.Add(roundImage1);
             SideBarMenu.ForeColor = SystemColors.ButtonHighlight;
-            SideBarMenu.Location = new Point(10, 36);
+            SideBarMenu.Location = new Point(0, 0);
             SideBarMenu.Name = "SideBarMenu";
-            SideBarMenu.Size = new Size(193, 816);
+            SideBarMenu.Size = new Size(193, 852);
             SideBarMenu.TabIndex = 0;
+            SideBarMenu.Paint += SideBarMenu_Paint;
             // 
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.FromArgb(29, 34, 40);
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(30, 415);
+            pictureBox6.Location = new Point(30, 424);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(35, 31);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -91,18 +92,19 @@
             // 
             pictureBox5.BackColor = Color.Firebrick;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(30, 690);
+            pictureBox5.Location = new Point(30, 716);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(35, 31);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 14;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.FromArgb(29, 34, 40);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(30, 354);
+            pictureBox4.Location = new Point(30, 363);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(35, 31);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -117,7 +119,7 @@
             Button_Logout.FlatAppearance.MouseOverBackColor = Color.IndianRed;
             Button_Logout.FlatStyle = FlatStyle.Flat;
             Button_Logout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            Button_Logout.Location = new Point(21, 686);
+            Button_Logout.Location = new Point(21, 712);
             Button_Logout.Margin = new Padding(10, 3, 3, 3);
             Button_Logout.Name = "Button_Logout";
             Button_Logout.Padding = new Padding(30, 0, 0, 0);
@@ -131,7 +133,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(41, 287);
+            label2.Location = new Point(41, 296);
             label2.Name = "label2";
             label2.Size = new Size(102, 20);
             label2.TabIndex = 10;
@@ -141,7 +143,7 @@
             // 
             salesMonth.AutoSize = true;
             salesMonth.Font = new Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            salesMonth.Location = new Point(41, 252);
+            salesMonth.Location = new Point(41, 261);
             salesMonth.Name = "salesMonth";
             salesMonth.Size = new Size(104, 32);
             salesMonth.TabIndex = 9;
@@ -155,7 +157,7 @@
             Button_Pigs.FlatAppearance.MouseOverBackColor = Color.FromArgb(69, 79, 94);
             Button_Pigs.FlatStyle = FlatStyle.Flat;
             Button_Pigs.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            Button_Pigs.Location = new Point(21, 410);
+            Button_Pigs.Location = new Point(21, 419);
             Button_Pigs.Margin = new Padding(10, 3, 3, 3);
             Button_Pigs.Name = "Button_Pigs";
             Button_Pigs.Size = new Size(150, 40);
@@ -172,7 +174,7 @@
             button_Dashboard.FlatStyle = FlatStyle.Flat;
             button_Dashboard.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button_Dashboard.ForeColor = SystemColors.ButtonHighlight;
-            button_Dashboard.Location = new Point(21, 349);
+            button_Dashboard.Location = new Point(21, 358);
             button_Dashboard.Margin = new Padding(10, 3, 3, 3);
             button_Dashboard.Name = "button_Dashboard";
             button_Dashboard.Padding = new Padding(45, 0, 0, 0);
@@ -187,7 +189,7 @@
             adminName.AutoSize = true;
             adminName.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             adminName.ForeColor = Color.White;
-            adminName.Location = new Point(67, 176);
+            adminName.Location = new Point(67, 185);
             adminName.Name = "adminName";
             adminName.Size = new Size(64, 23);
             adminName.TabIndex = 5;
@@ -197,7 +199,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(57, 158);
+            label5.Location = new Point(57, 167);
             label5.Name = "label5";
             label5.Size = new Size(88, 15);
             label5.TabIndex = 4;
@@ -207,7 +209,7 @@
             // 
             roundImage1.BorderStyle = BorderStyle.FixedSingle;
             roundImage1.Image = (Image)resources.GetObject("roundImage1.Image");
-            roundImage1.Location = new Point(48, 44);
+            roundImage1.Location = new Point(48, 53);
             roundImage1.Name = "roundImage1";
             roundImage1.Size = new Size(100, 103);
             roundImage1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -270,9 +272,9 @@
             // Panel_Main
             // 
             Panel_Main.BackgroundImageLayout = ImageLayout.None;
-            Panel_Main.Location = new Point(202, 128);
+            Panel_Main.Location = new Point(199, 136);
             Panel_Main.Name = "Panel_Main";
-            Panel_Main.Size = new Size(1157, 647);
+            Panel_Main.Size = new Size(1160, 639);
             Panel_Main.TabIndex = 2;
             // 
             // Dashboard

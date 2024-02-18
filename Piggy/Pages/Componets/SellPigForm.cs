@@ -35,6 +35,12 @@ namespace Piggy.Pages.Componets
                 MessageBox.Show("Please fill all fields!");
                 return;
             }
+            if (!float.TryParse(sellingAmount, out _) ||
+                !int.TryParse(pigID, out _) )
+            {
+                MessageBox.Show("Invalid Fields!");
+                return;
+            }
             using (var conn = ConnectionProvider.GetConnection())
             {
                 var hasPigquery = @"

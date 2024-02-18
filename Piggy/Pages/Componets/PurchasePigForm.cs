@@ -25,14 +25,17 @@ namespace Piggy.Pages.Componets
             this.dashboard = dashboard;
         }
 
-
+        private bool IsValidGender(string gender)
+        {
+            return gender.Trim().ToUpper() == "F" || gender.Trim().ToUpper() == "M";
+        }
 
 
         private void PurchasePigElm_Click(object sender, EventArgs e)
         {
             if (
             ageElm.Text == "0.0"
-            || weightElm.Text == "0.00" || breedElm.Text == ""
+            || weightElm.Text == "0.00" || breedElm.Text == "" || !IsValidGender(genderElm.Text)
             )
             {
                 MessageBox.Show("Invalid Fields!");

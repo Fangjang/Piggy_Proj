@@ -43,7 +43,6 @@ namespace Piggy.Pages.Componets
                 dgvhome.Columns[2].HeaderText = "Weight (KG)";
                 dgvhome.Columns[3].HeaderText = "Sex";
                 dgvhome.Columns[5].HeaderText = "Purchased at (Price)";
-                dgvhome.Columns[6].HeaderText = "Sold Date";
 
                 // responsive 
                 foreach (DataGridViewColumn column in dgvhome.Columns)

@@ -70,8 +70,6 @@ namespace Piggy
                     ";
 
                 var dataCount = conn.Query<int>(dataCountQuery, new { password }).FirstOrDefault();
-
-
                 if (dataCount > 0)
                 {
                     var getUserDetails = @"

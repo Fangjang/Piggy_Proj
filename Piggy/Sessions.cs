@@ -10,7 +10,6 @@ namespace Piggy
     public static class Session
     {
         public static UserModel CurrentUser;
-        static bool needTableReload = false;
     }
 
 }

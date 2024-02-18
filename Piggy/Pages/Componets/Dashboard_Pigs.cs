@@ -60,6 +60,7 @@ namespace Piggy.Pages.Componets
                 dgvPig.Columns["IsSold"].Visible = false;
                 dgvPig.Columns["soldDate"].Visible = false;
                 dgvPig.Columns["soldPrice"].Visible = false;
+                
                 dgvPig.Columns[0].HeaderText = "ID";
                 dgvPig.Columns[1].HeaderText = "Age (Years)";
                 dgvPig.Columns[2].HeaderText = "Weight (KG)";
